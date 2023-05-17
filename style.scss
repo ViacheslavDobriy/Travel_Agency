@@ -1,0 +1,36 @@
+@import 'vars';
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'poppins_semiboldregular';
+}
+a {
+    text-decoration: none;
+}
+
+.landing {
+    background-image: url(img/Background.webp);
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 17px;
+
+    &__nav {
+        display: flex;
+        gap: 38px;
+
+        &_menu {
+            display: flex;
+            gap: 35px;
+        }
+        &_log {
+            display: flex;
+            gap: 27px;
+        }
+    }
+}
