@@ -1,36 +1,107 @@
 @import 'vars';
+@import 'text_style';
 * {
     margin: 0;
     padding: 0;
 }
 
-html {
-    font-family: 'poppins_semiboldregular';
-}
 a {
     text-decoration: none;
+    color: unset;
+}
+
+.center {
+    padding-left: calc(50% - 660px);
+    padding-right: calc(50% - 660px);
 }
 
 .landing {
     background-image: url(img/Background.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 114px;
 }
 
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding-top: 17px;
-
+    align-items: center;
+    @include semibold;
+    color: $whiteText;
+    &__label {
+        font-size: 36px;
+        line-height: 54px;
+    }
     &__nav {
         display: flex;
         gap: 38px;
-
+        align-items: baseline;
         &_menu {
             display: flex;
             gap: 35px;
+            font-size: 16px;
+            line-height: 24px;
         }
         &_log {
             display: flex;
+            align-items: center;
             gap: 27px;
         }
+    }
+}
+
+.button-yellow {
+    @include button-style($siteColor);
+}
+
+.button-white {
+    @include button-style(#FFFFFF);
+}
+
+.content {
+    width: 40%;
+    color: $whiteText;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    &__title {
+        @include bold;
+    }
+    &__text {
+        @include regular;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    &__buttons {
+        padding-top: 20px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+}
+
+.booking {
+    display: flex;
+    flex-direction: column;
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+    &__button {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 4px 4px 0px 0px;
+        font-family: 'poppins_semiboldregular';
+        font-size: 16px;
+        line-height: 24px;
     }
 }
