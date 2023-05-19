@@ -4,3 +4,16 @@ $darkGrayText: #9DA1B4;
 $lightGrayText: #F4F6FA;
 $placeholderColor: #70717B;
 $siteColor: #FFC814;
+@mixin button-style($color) {
+    width: 160px;
+    height: 56px;
+    color: $blackText;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color;
+    border-radius: 4px;
+    font-family: 'poppins_semiboldregular';
+    font-size: 16px;
+    line-height: 24px;
+}

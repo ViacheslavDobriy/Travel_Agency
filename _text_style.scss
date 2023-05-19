@@ -1,0 +1,17 @@
+@mixin semibold {
+    font-family: 'poppins_semiboldregular';
+}
+
+@mixin bold {
+    font-family: 'poppinsbold';
+    font-size: 64px;
+    line-height: 76px;
+}
+
+@mixin medium_regular {
+    font-family: 'poppins_mediumregular';
+}
+
+@mixin regular {
+    font-family: 'poppinsregular';
+}
