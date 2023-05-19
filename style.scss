@@ -31,11 +31,8 @@ a {
     justify-content: space-between;
     padding-top: 17px;
     align-items: center;
-    @include semibold;
-    color: $whiteText;
     &__label {
-        font-size: 36px;
-        line-height: 54px;
+        @include text-format(600, 36px, 54px, $whiteText);
     }
     &__nav {
         display: flex;
@@ -44,41 +41,50 @@ a {
         &_menu {
             display: flex;
             gap: 35px;
-            font-size: 16px;
-            line-height: 24px;
+            @include text-format(600, 16px, 24px, $whiteText);
         }
         &_log {
             display: flex;
             align-items: center;
             gap: 27px;
+            @include text-format(600, 16px, 24px, $whiteText);
+        }
+    }
+    &__link {
+        transition: 0.5s;
+        &:hover {
+            color: $siteColor;
         }
     }
 }
 
-.button-yellow {
-    @include button-style($siteColor);
-    &__bold {
-        font-family: 'poppinsbold'
+.button {
+    @include button-style();
+    &__yellow {
+        background-color: $siteColor;
+        &_bold {
+            font-family: 'poppinsbold'
+        }
+    }
+    &__white {
+        background-color: $whiteText;
     }
 }
 
 .button-white {
-    @include button-style(#FFFFFF);
+    @include button-style();
 }
 
 .content {
     width: 40%;
-    color: $whiteText;
     display: flex;
     flex-direction: column;
     gap: 17px;
     &__title {
-        @include bold;
+        @include text-format(700, 64px, 76px, $whiteText);
     }
     &__text {
-        @include regular;
-        font-size: 16px;
-        line-height: 30px;
+        @include text-format(400, 16px, 30px, $whiteText);
     }
     &__buttons {
         padding-top: 20px;
@@ -111,9 +117,12 @@ a {
         padding-left: 10px;
         width: 120px;
         height: 45px;
-        font-family: 'poppins_semiboldregular';
-        font-size: 16px;
-        line-height: 24px;
+        @include text-format(600, 16px, 24px, $blackText);
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover {
+            background-color: $siteColor;
+        }
     }
     &__menu {
         display: flex;
@@ -130,9 +139,7 @@ a {
         gap: 7px;
     }
     &__title {
-        font-family: 'poppins_semiboldregular';
-        font-size: 16px;
-        line-height: 24px;
+        @include text-format(600, 16px, 24px, $blackText);
     }
     &__input {
         width: 170px;
@@ -140,10 +147,7 @@ a {
         border: none;
         box-shadow: 0px 6px 24px #E4E2EE;
         &::placeholder {
-            font-family: "poppinsregular";
-            font-size: 16px;
-            line-height: 15px;
-            color: $placeholderColor;
+            @include text-format(400, 16px, 15px, $placeholderColor);
             padding-left: 10px;
         }
     }
@@ -158,12 +162,95 @@ a {
 }
 
 .box {
-    background-image: url(img/Travel.svg);
-    // &__background {
-    //     font-family: 'poppins_semiboldregular';
-    //     font-size: 430px;
-    //     line-height: 300px;
-    //     color: rgba(244, 246, 250, 0.8);
-    //     padding-top: 121px;
-    // }
+    &__background {
+        position: relative;
+        top: 72px;
+        z-index: -1;
+    }
+    &__content {
+        display: flex;
+        flex-direction: row;
+        margin-top: -131px;
+        margin-right: -244px;
+        align-items: flex-end;
+        padding-bottom: 126px;
+    }
+}
+
+.pictures {
+    position: relative;
+    &__back {
+        border-radius: 14px;
+        filter: drop-shadow(0px 6px 24px #E4E2EE);
+    }
+    &__front {
+        position: absolute;
+        top: 297px;
+        left: 311px;
+        filter: drop-shadow(0px 6px 24px #E4E2EE);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 213px;
+    padding-right: 29px;
+    &__label {
+        font-family: 'quick_kiss_personal_useRg';
+        color: $siteColor;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 15px;
+        padding-bottom: 10px;
+    }
+    &__title {
+        @include text-format(700, 36px, 48px, #1F3347);
+        text-transform: capitalize;
+        padding-bottom: 29px;
+    }
+    &__text {
+        @include text-format(400, 16px, 24px, $darkGrayText);
+        padding-bottom: 19px;
+    }
+    &__list {
+        @include text-format(400, 16px, 36px, $darkGrayText);
+        padding-bottom: 32px;
+        list-style-type: none;
+        svg {
+            fill: $darkGrayText;
+            width: 14px;
+            height: 14px;
+        }
+    }
+    &__point {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        align-items: baseline;
+    }
+    &__benefits {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 50px;
+    }
+    &__benefit {
+        display: flex;
+        flex-direction: column;
+        gap: 7px;
+        max-width: min-content;
+    }
+    &__yellow-text {
+        @include text-format(700, 36px, 28px, $siteColor);
+    }
+    &__gray-text {
+        @include text-format(500, 16px, 24px, $darkGrayText);
+    }
+}
+
+.right-side {
+    &__picture {
+        max-width: 18vw;
+    }
 }

@@ -1,17 +1,23 @@
-@mixin semibold {
-    font-family: 'poppins_semiboldregular';
-}
-
 @mixin bold {
     font-family: 'poppinsbold';
     font-size: 64px;
     line-height: 76px;
 }
 
-@mixin medium_regular {
-    font-family: 'poppins_mediumregular';
-}
-
-@mixin regular {
-    font-family: 'poppinsregular';
+@mixin text-format($width, $font-size, $line-height, $color) {
+    @if $width==400 {
+        font-family: 'poppinsregular';
+    }
+    @else if $width==500 {
+        font-family: poppins_mediumregular;
+    }
+    @else if $width==600 {
+        font-family: 'poppins_semiboldregular';
+    }
+    @else if $width==700 {
+        font-family: 'poppinsbold';
+    }
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
 }

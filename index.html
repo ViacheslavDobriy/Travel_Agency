@@ -8,6 +8,7 @@
     <title>Travel Agency</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
+    <link rel="stylesheet" href="fonts/kiss_font/stylesheet.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                 </div>
                 <div class="header__nav_log">
                     <a href="#" class="header__link">Login</a>
-                    <a href="#" class="header__link button-yellow">Sign UP</a>
+                    <a href="#" class="header__log button button__yellow">Sign UP</a>
                 </div>
             </div>
         </header>
@@ -36,8 +37,8 @@
             <h1 class="content__title">It's a Big World Out There, Go Explore</h1>
             <p class="content__text">Conveniently customize proactive web services for leveraged without continualliery aggregate fricctionle ou wellies richard and very customize continually.</p>
             <div class="content__buttons">
-                <a href="#" class="button-yellow">Get Exploration</a>
-                <a href="#" class="button-white">Read More</a>
+                <a href="#" class="button button__yellow">Get Exploration</a>
+                <a href="#" class="button button__white">Read More</a>
             </div>
         </section>
     </main>
@@ -82,17 +83,50 @@
                 <input type="number" class="booking__input" placeholder="3">
             </div>
             <div class="booking__details negative-margin">
-                <a href="#" class="button-yellow bold-text">Book Now</a>
+                <a href="#" class="button button__yellow button__yellow_bold">Book Now</a>
             </div>
         </div>
     </section>
     <div class="box center">
-        <div class="pictures">
-            <img src="img/couple of travellers.png" alt="couple of travellers">
-            <img src="img/happy Lady.png" alt="happy lady is standing face to you">
+        <img src="img/Travel.svg" alt="Надпись Travel на заднем фоне" class="box__background">
+        <div class="box__content">
+            <div class="pictures">
+                <img src="img/couple of travellers.webp" alt="couple of travellers" class="pictures__back">
+                <img src="img/happy Lady.webp" alt="happy lady is standing face to you" class="pictures__front">
+            </div>
+            <div class="container">
+                <h6 class="container__label">About us</h6>
+                <h3 class="container__title">World best travel agency company since 2008.</h3>
+                <p class="container__text">Continually productize compelling quality for packed with elated productize compelling quality for packed in with all elated Them Setting up to website and creating pages.</p>
+                <ul class="container__list">
+                    <li class="container__point"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>We
+                        providing compe quality for packed with elated different.</li>
+                    <li class="container__point"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                        <p class="container__point_text">We are one of compelling quality for packed with leading.</p>
+                    </li>
+                    <li class="container__point"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM337 209L209 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L303 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>Learn
+                        how compelling quality for packed with elated grow.</li>
+                </ul>
+                <div class="container__benefits">
+                    <div class="container__benefit">
+                        <p class="container__yellow-text">20+</p>
+                        <p class="container__gray-text">Year Experience</p>
+                    </div>
+                    <div class="container__benefit">
+                        <p class="container__yellow-text">250+</p>
+                        <p class="container__gray-text">Destination Collaboratin</p>
+                    </div>
+                    <div class="container__benefit">
+                        <p class="container__yellow-text">170K+</p>
+                        <p class="container__gray-text">Happy Customers</p>
+                    </div>
+                </div>
+                <a href="#" class="button button__yellow button__yellow_bold">Read More</a>
+            </div>
+            <div class="right-side">
+                <img src="img/background-summer.webp" alt="Изображение серфдоски и пальмы в летних тонах" class="right-side__picture">
+            </div>
         </div>
-        <div class="container"></div>
-        <div class="side-picture"></div>
     </div>
 </body>
 

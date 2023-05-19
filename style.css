@@ -29,12 +29,12 @@ a {
   justify-content: space-between;
   padding-top: 17px;
   align-items: center;
-  font-family: "poppins_semiboldregular";
-  color: #FFFFFF;
 }
 .header__label {
+  font-family: "poppins_semiboldregular";
   font-size: 36px;
   line-height: 54px;
+  color: #FFFFFF;
 }
 .header__nav {
   display: flex;
@@ -44,49 +44,64 @@ a {
 .header__nav_menu {
   display: flex;
   gap: 35px;
+  font-family: "poppins_semiboldregular";
   font-size: 16px;
   line-height: 24px;
+  color: #FFFFFF;
 }
 .header__nav_log {
   display: flex;
   align-items: center;
   gap: 27px;
+  font-family: "poppins_semiboldregular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+}
+.header__link {
+  transition: 0.5s;
+}
+.header__link:hover {
+  color: #FFC814;
 }
 
-.button-yellow {
+.button {
   width: 160px;
   height: 56px;
-  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFC814;
   border-radius: 4px;
   font-family: "poppins_semiboldregular";
   font-size: 16px;
   line-height: 24px;
+  color: #000000;
 }
-.button-yellow__bold {
+.button__yellow {
+  background-color: #FFC814;
+}
+.button__yellow_bold {
   font-family: "poppinsbold";
+}
+.button__white {
+  background-color: #FFFFFF;
 }
 
 .button-white {
   width: 160px;
   height: 56px;
-  color: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFFFFF;
   border-radius: 4px;
   font-family: "poppins_semiboldregular";
   font-size: 16px;
   line-height: 24px;
+  color: #000000;
 }
 
 .content {
   width: 40%;
-  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   gap: 17px;
@@ -95,11 +110,13 @@ a {
   font-family: "poppinsbold";
   font-size: 64px;
   line-height: 76px;
+  color: #FFFFFF;
 }
 .content__text {
   font-family: "poppinsregular";
   font-size: 16px;
   line-height: 30px;
+  color: #FFFFFF;
 }
 .content__buttons {
   padding-top: 20px;
@@ -135,6 +152,12 @@ a {
   font-family: "poppins_semiboldregular";
   font-size: 16px;
   line-height: 24px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.booking__button:hover {
+  background-color: #FFC814;
 }
 .booking__menu {
   display: flex;
@@ -154,6 +177,7 @@ a {
   font-family: "poppins_semiboldregular";
   font-size: 16px;
   line-height: 24px;
+  color: #000000;
 }
 .booking__input {
   width: 170px;
@@ -184,6 +208,108 @@ a {
   font-family: "poppinsbold";
 }
 
-.box {
-  background-image: url(img/Travel.svg);
+.box__background {
+  position: relative;
+  top: 72px;
+  z-index: -1;
+}
+.box__content {
+  display: flex;
+  flex-direction: row;
+  margin-top: -131px;
+  margin-right: -244px;
+  align-items: flex-end;
+  padding-bottom: 126px;
+}
+
+.pictures {
+  position: relative;
+}
+.pictures__back {
+  border-radius: 14px;
+  filter: drop-shadow(0px 6px 24px #E4E2EE);
+}
+.pictures__front {
+  position: absolute;
+  top: 297px;
+  left: 311px;
+  filter: drop-shadow(0px 6px 24px #E4E2EE);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 213px;
+  padding-right: 29px;
+}
+.container__label {
+  font-family: "quick_kiss_personal_useRg";
+  color: #FFC814;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 15px;
+  padding-bottom: 10px;
+}
+.container__title {
+  font-family: "poppinsbold";
+  font-size: 36px;
+  line-height: 48px;
+  color: #1F3347;
+  text-transform: capitalize;
+  padding-bottom: 29px;
+}
+.container__text {
+  font-family: "poppinsregular";
+  font-size: 16px;
+  line-height: 24px;
+  color: #9DA1B4;
+  padding-bottom: 19px;
+}
+.container__list {
+  font-family: "poppinsregular";
+  font-size: 16px;
+  line-height: 36px;
+  color: #9DA1B4;
+  padding-bottom: 32px;
+  list-style-type: none;
+}
+.container__list svg {
+  fill: #9DA1B4;
+  width: 14px;
+  height: 14px;
+}
+.container__point {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: baseline;
+}
+.container__benefits {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+.container__benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  max-width: -moz-min-content;
+  max-width: min-content;
+}
+.container__yellow-text {
+  font-family: "poppinsbold";
+  font-size: 36px;
+  line-height: 28px;
+  color: #FFC814;
+}
+.container__gray-text {
+  font-family: poppins_mediumregular;
+  font-size: 16px;
+  line-height: 24px;
+  color: #9DA1B4;
+}
+
+.right-side__picture {
+  max-width: 18vw;
 }/*# sourceMappingURL=style.css.map */
